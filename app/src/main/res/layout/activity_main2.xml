@@ -5,23 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity2">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Main"
+        android:text="SEC"
         android:textSize="48sp"
         android:textAlignment="center"
         android:background="@android:color/holo_blue_light"
         />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="SEC"
-        android:textSize="24sp"
-        android:layout_marginTop="10dp"
-        android:onClick="btn_go2"
-        />
-
 </LinearLayout>
