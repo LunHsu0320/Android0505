@@ -22,11 +22,47 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="數量"
-        android:textSize="16sp"/>
+        android:textSize="36sp"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="+"
-        android:textSize="16sp"
+        android:onClick="click加"
+        android:textSize="24sp"
+        />
+    <TextView
+        android:id="@+id/tv_數量"
+        android:layout_width="90sp"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:gravity="center"
+        android:textSize="36sp"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:textSize="24sp"
+        android:onClick="click減"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="總金額"
+        android:textSize="36sp"
+        android:layout_marginTop="16dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_總金額"
+        android:layout_marginBottom="16dp"
+        android:text="NT$ 0"
+        android:textSize="36sp"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="order"
+        android:onClick="clickOrder"
         />
 </LinearLayout>
