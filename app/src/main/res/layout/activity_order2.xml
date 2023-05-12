@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".OrderActivity2">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="訂單"
+        android:textSize="36sp"
+        android:textColor="#ffffff"
+        android:background="#222222"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="漢堡 $50"
+        android:textSize="36sp"
+        android:textColor="#cc0000"
+        android:layout_marginBottom="16dp"
+        />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="數量"
+        android:textSize="36sp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:textSize="16sp"
+        android:onClick="click減"
+        />
+    <TextView
+        android:id="@+id/tv_數量"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="0"
+        android:gravity="center"
+        android:textSize="42sp"
+        />
+
+
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="+"
+    android:onClick="click加"
+    />
+
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="總金額"
+            android:textSize="36sp"
+            android:layout_marginRight="8dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_總金額"
+            android:text="NT$ 0"
+            android:textSize="36dp"
+            />
+
+    </LinearLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="結算"
+        android:textSize="24sp"
+        android:backgroundTint="#00aa00"
+        android:onClick="clickOrder"
+        android:layout_marginTop="8dp"
+        />
+</LinearLayout>

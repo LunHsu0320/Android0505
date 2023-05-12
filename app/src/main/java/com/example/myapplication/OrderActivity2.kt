@@ -6,8 +6,7 @@ import android.util.Log
 import android.widget.TextView
 import android.view.View
 
-
-class OrderActivity : AppCompatActivity() {
+class OrderActivity2 : AppCompatActivity() {
     private var 數量:Int=0
     private var 單價:Int=0
     private var 總金額:Int=0
@@ -17,14 +16,14 @@ class OrderActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_order)
+        setContentView(R.layout.activity_order2)
         初值設定()
     }
     fun 初值設定(){
         tv_數量= findViewById(R.id.tv_數量)
         tv_總金額=findViewById(R.id.tv_總金額)
         數量=0
-        單價=40
+        單價=50
     }
     fun 顯示數量(){
         var s =""+數量
