@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
     fun btn_go2(v:View){
-        var intent = Intent(this,MainActivity2::class.java)
+        var intent = Intent(this,ResultMainActivity::class.java)
         startActivity(intent)
     }
 }
