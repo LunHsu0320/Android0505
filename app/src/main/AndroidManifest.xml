@@ -16,31 +16,31 @@
             android:name="com.example.storeactivity.StoreActivity"
             android:exported="true" />
         <activity
-            android:name=".Result2Activity"
+            android:name="com.example.result.Result2Activity"
             android:exported="false" />
         <activity
-            android:name=".Result1Activity"
+            android:name="com.example.result.Result1Activity"
             android:exported="false" />
         <activity
-            android:name=".ResultMainActivity"
+            android:name="com.example.result.ResultMainActivity"
             android:exported="false" />
         <activity
-            android:name=".Score_Activity"
+            android:name="com.example.score.Score_Activity"
             android:exported="true" />
         <activity
-            android:name=".OrderActivity3_2"
+            android:name="com.example.order.OrderActivity3_2"
             android:exported="false" />
         <activity
-            android:name=".OrderActivity3"
+            android:name="com.example.order.OrderActivity3"
+            android:exported="true" />
+        <activity
+            android:name="com.example.order.OrderActivity2"
             android:exported="false" />
         <activity
-            android:name=".OrderActivity2"
+            android:name="com.example.order.OrderActivity"
             android:exported="false" />
         <activity
-            android:name=".OrderActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity2"
+            android:name="com.example.secpage.MainActivity2"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

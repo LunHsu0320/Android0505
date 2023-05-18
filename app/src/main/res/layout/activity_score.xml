@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context=".Score_Activity">
+    tools:context="com.example.score.Score_Activity">
 
     <TextView
         android:id="@+id/tv_score"

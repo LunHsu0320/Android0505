@@ -4,6 +4,10 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.example.order.OrderActivity3
+import com.example.result.ResultMainActivity
+import com.example.secpage.MainActivity2
+import com.example.storeactivity.StoreActivity
 
 
 class MainActivity : AppCompatActivity() {
@@ -11,8 +15,24 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }
-    fun btn_go2(v:View){
-        var intent = Intent(this,ResultMainActivity::class.java)
+
+    fun btn_go2(v: View) {
+        var intent = Intent(this, MainActivity2::class.java)
+        startActivity(intent)//切換畫面
+    }
+
+    fun btn_od(v: View) {
+        var intent = Intent(this, OrderActivity3::class.java)
+        startActivity(intent)//切換畫面
+    }
+
+    fun btn_rm(v: View) {
+        var intent = Intent(this, ResultMainActivity::class.java)
+        startActivity(intent)//切換畫面
+    }
+
+    fun btn_sa(v: View) {
+        var intent = Intent(this, StoreActivity::class.java)
         startActivity(intent)//切換畫面
     }
 }

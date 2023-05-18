@@ -1,10 +1,11 @@
-package com.example.myapplication
+package com.example.score
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
 import android.util.Log
 import android.view.View
+import com.example.myapplication.R
 
 
 class Score_Activity : AppCompatActivity() {

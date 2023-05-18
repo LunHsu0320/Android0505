@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.order
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,7 +6,15 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.TextView
 import android.view.View
+import com.example.myapplication.R
+import com.example.result.KEY_r2
+import com.example.result.Result2
+import com.example.storeactivity.Student
+import java.io.Serializable
 
+const val KEY_or1 = "KEY_Order1"
+const val KEY_or2 = "KEY_Order2"
+const val KEY_or3 = "KEY_Order3"
 class OrderActivity3 : AppCompatActivity() {
     private var 漢堡數量:Int=0
     private var 薯條數量:Int=0
@@ -19,6 +27,9 @@ class OrderActivity3 : AppCompatActivity() {
     private var tv_漢堡數量:TextView?=null
     private var tv_薯條數量:TextView?=null
     private var tv_總金額:TextView?=null
+
+    private var ol: OrderList? = null
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -90,10 +101,12 @@ class OrderActivity3 : AppCompatActivity() {
     fun clickOrder (View:View?){
         總金額=(漢堡單價*漢堡數量)+(薯條單價*薯條數量)
         顯示總金額()
+
         val intent = Intent(this, OrderActivity3_2::class.java)
         intent.putExtra("漢堡數量", 漢堡數量)
         intent.putExtra("薯條數量", 薯條數量)
         intent.putExtra("總金額", 總金額)
+
         startActivity(intent)
     }
     fun clickReset(View:View?){

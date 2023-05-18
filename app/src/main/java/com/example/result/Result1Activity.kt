@@ -1,9 +1,10 @@
-package com.example.myapplication
+package com.example.result
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import com.example.myapplication.R
 
 //val 變數不可修改(初值設定後不可修改 = 不能再指定新的數值)
 //var 變數可修改

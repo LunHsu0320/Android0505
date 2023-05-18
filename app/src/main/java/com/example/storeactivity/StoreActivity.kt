@@ -12,7 +12,6 @@ import java.io.ObjectOutputStream
 import android.util.Log
 import android.view.View
 import android.widget.EditText
-import com.example.myapplication.Result2
 
 
 class StoreActivity : AppCompatActivity() {

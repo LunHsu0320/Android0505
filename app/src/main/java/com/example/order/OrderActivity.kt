@@ -1,10 +1,11 @@
-package com.example.myapplication
+package com.example.order
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.TextView
 import android.view.View
+import com.example.myapplication.R
 
 
 class OrderActivity : AppCompatActivity() {

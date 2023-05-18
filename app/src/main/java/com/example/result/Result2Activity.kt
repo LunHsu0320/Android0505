@@ -1,10 +1,12 @@
-package com.example.myapplication
+package com.example.result
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
 import android.view.View
 import android.util.Log
+import com.example.myapplication.R
+
 const val KEY_r2 = "KEY_Result2"
 
 class Result2Activity : AppCompatActivity() {

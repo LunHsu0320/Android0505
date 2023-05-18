@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:gravity="center_horizontal"
+    >
 
     <TextView
         android:layout_width="match_parent"
@@ -18,10 +20,34 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SEC"
+        android:text="Sec Page"
         android:textSize="24sp"
         android:layout_marginTop="10dp"
         android:onClick="btn_go2"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order"
+        android:textSize="24sp"
+        android:layout_marginTop="10dp"
+        android:onClick="btn_od"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ResultMain"
+        android:textSize="24sp"
+        android:layout_marginTop="10dp"
+        android:onClick="btn_rm"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Store"
+        android:textSize="24sp"
+        android:layout_marginTop="10dp"
+        android:onClick="btn_sa"
         />
 
 </LinearLayout>
