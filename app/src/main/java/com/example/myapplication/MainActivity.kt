@@ -13,6 +13,6 @@ class MainActivity : AppCompatActivity() {
     }
     fun btn_go2(v:View){
         var intent = Intent(this,ResultMainActivity::class.java)
-        startActivity(intent)
+        startActivity(intent)//切換畫面
     }
 }
