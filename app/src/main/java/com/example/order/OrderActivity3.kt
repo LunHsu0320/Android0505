@@ -106,7 +106,9 @@ class OrderActivity3 : AppCompatActivity() {
         intent.putExtra("漢堡數量", 漢堡數量)
         intent.putExtra("薯條數量", 薯條數量)
         intent.putExtra("總金額", 總金額)
-
+        Log.d("Extra 資料", "漢堡數量: $漢堡數量")
+        Log.d("Extra 資料", "薯條數量: $薯條數量")
+        Log.d("Extra 資料", "總金額: $總金額")
         startActivity(intent)
     }
     fun clickReset(View:View?){
