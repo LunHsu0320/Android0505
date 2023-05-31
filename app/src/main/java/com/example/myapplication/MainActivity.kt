@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import com.example.order.OrderActivity3
 import com.example.result.ResultMainActivity
+import com.example.scroll.ScrollActivity
 import com.example.secpage.MainActivity2
 import com.example.storeactivity.StoreActivity
 
@@ -33,6 +34,10 @@ class MainActivity : AppCompatActivity() {
 
     fun btn_sa(v: View) {
         var intent = Intent(this, StoreActivity::class.java)
+        startActivity(intent)//切換畫面
+    }
+    fun btn_scrolla(v: View) {
+        var intent = Intent(this, ScrollActivity::class.java)
         startActivity(intent)//切換畫面
     }
 }

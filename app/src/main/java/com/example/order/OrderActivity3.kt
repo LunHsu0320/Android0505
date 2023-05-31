@@ -12,9 +12,6 @@ import com.example.result.Result2
 import com.example.storeactivity.Student
 import java.io.Serializable
 
-const val KEY_or1 = "KEY_Order1"
-const val KEY_or2 = "KEY_Order2"
-const val KEY_or3 = "KEY_Order3"
 class OrderActivity3 : AppCompatActivity() {
     private var 漢堡數量:Int=0
     private var 薯條數量:Int=0
@@ -24,12 +21,10 @@ class OrderActivity3 : AppCompatActivity() {
 
     private var 總金額:Int=0
 
+    //變數若要設為null, 類型必須加上?
     private var tv_漢堡數量:TextView?=null
     private var tv_薯條數量:TextView?=null
     private var tv_總金額:TextView?=null
-
-    private var ol: OrderList? = null
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

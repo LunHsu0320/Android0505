@@ -32,6 +32,11 @@ class OrderActivity3_2 : AppCompatActivity() {
         fun btn_back(v: View){
         finish()
     }
+
+    fun btn_submit(v: View){
+        val intent = Intent(this, OrderActivity3::class.java)
+        startActivity(intent)
+    }
     fun 顯示訂單() {
         初始設定()
         val intent = getIntent()
@@ -46,23 +51,14 @@ class OrderActivity3_2 : AppCompatActivity() {
         var a = 漢堡數量.toString()
         Log.d("@@@", a)
         tv_漢堡數量?.text = a
-//        tv_漢堡數量?.setText(a)
-//        Log.d("@@@", "tv_漢堡數量: " + tv_漢堡數量?.text)
-
-
 
         var b = 薯條數量.toString()
         Log.d("@@@", b)
         tv_薯條數量?.text = b
-//        tv_薯條數量?.setText(b)
-
-
 
         val c = "NT$ $總金額"
         Log.d("@@@", c)
         tv_總金額?.text = c
-//        tv_總金額?.setText(c)
-
     }
 
 }
