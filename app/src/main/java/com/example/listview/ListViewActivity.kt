@@ -20,6 +20,8 @@ class ListViewActivity : AppCompatActivity() {
     val context = this
     var listView: ListView? = null
     var myListAdapter: MyListAdapter? = null
+    private var r2Selected: Result2? = null
+
 
 
 
@@ -40,7 +42,7 @@ class ListViewActivity : AppCompatActivity() {
         listView?.emptyView = findViewById<TextView>(R.id.empty)
         //設定(監聽器)點選項目OnItemClick要執行的程式
         listView?.setOnItemClickListener { parent, view, position, id ->
-
+            r2Selected = myListAdapter?.stArrayList?.get(position)
             //監聽被點擊目標
             //根據被點擊的位置回傳position 從 adapter 取得資料傳給 r2
             val r2 = listView?.adapter?.getItem(position)
@@ -65,20 +67,42 @@ class ListViewActivity : AppCompatActivity() {
         Toast.makeText(context, "資料新增完成", Toast.LENGTH_SHORT).show()
     }
 
-    fun click_remove(v: View) {
+//    fun click_remove(v: View) {
+//        // 檢查列表中是否有資料
+//        if (myListAdapter?.drawableArrayList?.isNotEmpty() == true && myListAdapter?.stArrayList?.isNotEmpty() == true) {
+//            // 移除最後一個圖片ID
+//            val drawableIndex = myListAdapter?.drawableArrayList?.size?.minus(1)
+//            drawableIndex?.let { index ->
+//                myListAdapter?.drawableArrayList?.removeAt(index)
+//            }
+//
+//            // 移除最後一個學生資料
+//            val studentIndex = myListAdapter?.stArrayList?.size?.minus(1)
+//            studentIndex?.let { index ->
+//                myListAdapter?.stArrayList?.removeAt(index)
+//            }
+//
+//            // 通知 ListView 更新畫面
+//            myListAdapter?.notifyDataSetChanged()
+//
+//            // 顯示短訊息
+//            Toast.makeText(context, "資料移除完成", Toast.LENGTH_SHORT).show()
+//        } else {
+//            // 列表中無資料，顯示相應的提示訊息
+//            Toast.makeText(context, "沒有要移除的資料", Toast.LENGTH_SHORT).show()
+//        }
+//    }
+fun click_remove(v: View) {
+    // 檢查是否有選擇資料項目
+    if (r2Selected != null) {
         // 檢查列表中是否有資料
         if (myListAdapter?.drawableArrayList?.isNotEmpty() == true && myListAdapter?.stArrayList?.isNotEmpty() == true) {
-            // 移除最後一個圖片ID
-            val drawableIndex = myListAdapter?.drawableArrayList?.size?.minus(1)
-            drawableIndex?.let { index ->
-                myListAdapter?.drawableArrayList?.removeAt(index)
-            }
+            // 確定被選中的資料項目在列表中的索引位置
+            val position = myListAdapter?.stArrayList?.indexOf(r2Selected)
 
-            // 移除最後一個學生資料
-            val studentIndex = myListAdapter?.stArrayList?.size?.minus(1)
-            studentIndex?.let { index ->
-                myListAdapter?.stArrayList?.removeAt(index)
-            }
+            // 移除被選中的 r2 變量
+            myListAdapter?.stArrayList?.remove(r2Selected)
+            myListAdapter?.drawableArrayList?.removeAt(position ?: -1)
 
             // 通知 ListView 更新畫面
             myListAdapter?.notifyDataSetChanged()
@@ -89,7 +113,16 @@ class ListViewActivity : AppCompatActivity() {
             // 列表中無資料，顯示相應的提示訊息
             Toast.makeText(context, "沒有要移除的資料", Toast.LENGTH_SHORT).show()
         }
+
+        // 清除選擇的 r2 變量
+        r2Selected = null
+    } else {
+        // 沒有選擇資料項目，顯示相應的提示訊息
+        Toast.makeText(context, "請先選擇要移除的資料項目", Toast.LENGTH_SHORT).show()
     }
+}
+
+
 
 
 
