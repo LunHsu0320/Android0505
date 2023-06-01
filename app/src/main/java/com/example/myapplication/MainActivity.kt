@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.example.listview.ListViewActivity
 import com.example.order.OrderActivity3
 import com.example.result.ResultMainActivity
 import com.example.scroll.ScrollActivity
@@ -38,6 +39,10 @@ class MainActivity : AppCompatActivity() {
     }
     fun btn_scrolla(v: View) {
         var intent = Intent(this, ScrollActivity::class.java)
+        startActivity(intent)//切換畫面
+    }
+    fun btn_listv(v: View) {
+        var intent = Intent(this, ListViewActivity::class.java)
         startActivity(intent)//切換畫面
     }
 }
