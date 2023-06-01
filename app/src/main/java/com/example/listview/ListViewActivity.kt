@@ -22,9 +22,6 @@ class ListViewActivity : AppCompatActivity() {
     var myListAdapter: MyListAdapter? = null
     private var r2Selected: Result2? = null
 
-
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list_view)
@@ -67,71 +64,41 @@ class ListViewActivity : AppCompatActivity() {
         Toast.makeText(context, "資料新增完成", Toast.LENGTH_SHORT).show()
     }
 
-//    fun click_remove(v: View) {
-//        // 檢查列表中是否有資料
-//        if (myListAdapter?.drawableArrayList?.isNotEmpty() == true && myListAdapter?.stArrayList?.isNotEmpty() == true) {
-//            // 移除最後一個圖片ID
-//            val drawableIndex = myListAdapter?.drawableArrayList?.size?.minus(1)
-//            drawableIndex?.let { index ->
-//                myListAdapter?.drawableArrayList?.removeAt(index)
-//            }
-//
-//            // 移除最後一個學生資料
-//            val studentIndex = myListAdapter?.stArrayList?.size?.minus(1)
-//            studentIndex?.let { index ->
-//                myListAdapter?.stArrayList?.removeAt(index)
-//            }
-//
-//            // 通知 ListView 更新畫面
-//            myListAdapter?.notifyDataSetChanged()
-//
-//            // 顯示短訊息
-//            Toast.makeText(context, "資料移除完成", Toast.LENGTH_SHORT).show()
-//        } else {
-//            // 列表中無資料，顯示相應的提示訊息
-//            Toast.makeText(context, "沒有要移除的資料", Toast.LENGTH_SHORT).show()
-//        }
-//    }
-fun click_remove(v: View) {
-    // 檢查是否有選擇資料項目
-    if (r2Selected != null) {
-        // 檢查列表中是否有資料
-        if (myListAdapter?.drawableArrayList?.isNotEmpty() == true && myListAdapter?.stArrayList?.isNotEmpty() == true) {
-            // 確定被選中的資料項目在列表中的索引位置
-            val position = myListAdapter?.stArrayList?.indexOf(r2Selected)
+    //click_remove chatgpt產生
+    fun click_remove(v: View) {
+        // 檢查是否有選擇資料項目
+        if (r2Selected != null) {
+            // 檢查列表中是否有資料
+            if (myListAdapter?.drawableArrayList?.isNotEmpty() == true && myListAdapter?.stArrayList?.isNotEmpty() == true) {
+                // 確定被選中的資料項目在列表中的索引位置
+                val position = myListAdapter?.stArrayList?.indexOf(r2Selected)
 
-            // 移除被選中的 r2 變量
-            myListAdapter?.stArrayList?.remove(r2Selected)
-            myListAdapter?.drawableArrayList?.removeAt(position ?: -1)
+                // 移除被選中的 r2 變量
+                myListAdapter?.stArrayList?.remove(r2Selected)
+                myListAdapter?.drawableArrayList?.removeAt(position ?: -1)
 
-            // 通知 ListView 更新畫面
-            myListAdapter?.notifyDataSetChanged()
+                // 通知 ListView 更新畫面
+                myListAdapter?.notifyDataSetChanged()
 
-            // 顯示短訊息
-            Toast.makeText(context, "資料移除完成", Toast.LENGTH_SHORT).show()
+                // 顯示短訊息
+                Toast.makeText(context, "資料移除完成", Toast.LENGTH_SHORT).show()
+            } else {
+                // 列表中無資料，顯示相應的提示訊息
+                Toast.makeText(context, "沒有要移除的資料", Toast.LENGTH_SHORT).show()
+            }
+
+            // 清除選擇的 r2 變量
+            r2Selected = null
         } else {
-            // 列表中無資料，顯示相應的提示訊息
-            Toast.makeText(context, "沒有要移除的資料", Toast.LENGTH_SHORT).show()
+            // 沒有選擇資料項目，顯示相應的提示訊息
+            Toast.makeText(context, "請先選擇要移除的資料項目", Toast.LENGTH_SHORT).show()
         }
-
-        // 清除選擇的 r2 變量
-        r2Selected = null
-    } else {
-        // 沒有選擇資料項目，顯示相應的提示訊息
-        Toast.makeText(context, "請先選擇要移除的資料項目", Toast.LENGTH_SHORT).show()
     }
-}
-
-
-
-
-
 
     fun click_reset(v: View) {
         初始化ListView()
         Toast.makeText(context, "資料reset", Toast.LENGTH_SHORT).show()
     }
-
 
     //inner 內部類別 可使用外部類別資料,包含private資料
     inner class MyListAdapter : BaseAdapter() { //繼承BaseAdapter
@@ -185,7 +152,5 @@ fun click_remove(v: View) {
 
             return itemLayout
         }
-
-
     }
 }
