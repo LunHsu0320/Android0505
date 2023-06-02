@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+    <TextView
+        android:id="@+id/tv_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="48sp"
+        android:text="題號"
+        android:layout_gravity="center"/>
+    <TextView
+        android:id="@+id/tv_question"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:textSize="36sp"
+        android:text="這裡是題目"
+        android:layout_gravity="center"/>
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+        <RadioButton
+            android:id="@+id/tv_op_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="36sp"
+            android:text="A 答案"/>
+    <RadioButton
+        android:id="@+id/tv_op_b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="36sp"
+        android:text="B 答案"/>
+    <RadioButton
+        android:id="@+id/tv_op_c"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="36sp"
+        android:text="C 答案"/>
+    </RadioGroup>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:textSize="36sp"
+        android:layout_gravity="center"
+        android:text="左滑            右滑"/>
+
+
+</LinearLayout>

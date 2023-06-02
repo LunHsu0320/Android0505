@@ -67,4 +67,12 @@
         android:onClick="btn_listv"
         />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PagerActivity"
+        android:textSize="24sp"
+        android:layout_marginTop="10dp"
+        android:onClick="btn_pa"
+        />
 </LinearLayout>

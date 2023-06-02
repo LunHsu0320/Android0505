@@ -10,6 +10,7 @@ import com.example.result.ResultMainActivity
 import com.example.scroll.ScrollActivity
 import com.example.secpage.MainActivity2
 import com.example.storeactivity.StoreActivity
+import com.example.viewpager2.PagerActivity
 
 
 class MainActivity : AppCompatActivity() {
@@ -43,6 +44,10 @@ class MainActivity : AppCompatActivity() {
     }
     fun btn_listv(v: View) {
         var intent = Intent(this, ListViewActivity::class.java)
+        startActivity(intent)//切換畫面
+    }
+    fun btn_pa(v: View) {
+        var intent = Intent(this, PagerActivity::class.java)
         startActivity(intent)//切換畫面
     }
 }
