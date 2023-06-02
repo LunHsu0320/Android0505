@@ -63,6 +63,9 @@ class AnimationActivity : AppCompatActivity() {
     }
 
     //任務
+    //Runnable 是一個介面，用於定義可執行的任務或程式碼塊。
+    //通常，我們將需要在背景執行緒中執行的任務封裝成 Runnable 物件
+    //並提交給執行緒池或使用 Handler 在指定的執行緒上執行。
     inner class MyTask : Runnable {
         var count = 0 //換圖次數
         var i = 0 //第幾張圖
@@ -82,6 +85,7 @@ class AnimationActivity : AppCompatActivity() {
             if (++i == img_arraylist.size) {
                 i = 0
             }
+
             //提交任務 1000毫秒(1秒) 後執行
             handler.postDelayed(this, 1000)
 
