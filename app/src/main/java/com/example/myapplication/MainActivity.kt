@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.example.handler.AnimationActivity
 import com.example.listview.ListViewActivity
 import com.example.order.OrderActivity3
 import com.example.result.ResultMainActivity
@@ -48,6 +49,10 @@ class MainActivity : AppCompatActivity() {
     }
     fun btn_pa(v: View) {
         var intent = Intent(this, PagerActivity::class.java)
+        startActivity(intent)//切換畫面
+    }
+    fun btn_handler(v: View) {
+        var intent = Intent(this, AnimationActivity::class.java)
         startActivity(intent)//切換畫面
     }
 }
