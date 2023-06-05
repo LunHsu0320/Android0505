@@ -11,6 +11,7 @@ import com.example.result.ResultMainActivity
 import com.example.scroll.ScrollActivity
 import com.example.secpage.MainActivity2
 import com.example.storeactivity.StoreActivity
+import com.example.tablayout.TabActivity
 import com.example.viewpager2.PagerActivity
 
 
@@ -53,6 +54,11 @@ class MainActivity : AppCompatActivity() {
     }
     fun btn_handler(v: View) {
         var intent = Intent(this, AnimationActivity::class.java)
+        startActivity(intent)//切換畫面
+    }
+
+    fun btn_tab(v: View) {
+        var intent = Intent(this, TabActivity::class.java)
         startActivity(intent)//切換畫面
     }
 }
