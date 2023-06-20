@@ -10,6 +10,7 @@ import com.example.order.OrderActivity3
 import com.example.result.ResultMainActivity
 import com.example.scroll.ScrollActivity
 import com.example.secpage.MainActivity2
+import com.example.sql.EmpActivity
 import com.example.storeactivity.StoreActivity
 import com.example.tablayout.TabActivity
 import com.example.viewpager2.PagerActivity
@@ -59,6 +60,10 @@ class MainActivity : AppCompatActivity() {
 
     fun btn_tab(v: View) {
         var intent = Intent(this, TabActivity::class.java)
+        startActivity(intent)//切換畫面
+    }
+    fun btn_sql(v: View) {
+        var intent = Intent(this, EmpActivity::class.java)
         startActivity(intent)//切換畫面
     }
 }
